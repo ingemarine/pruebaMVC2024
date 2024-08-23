@@ -17,7 +17,7 @@ function s($html) {
 function isAuth() {
     session_start();
     if(!isset($_SESSION['login'])) {
-        header('Location: /');
+        header('Location: /pruebaMVC2024/');
     }
 }
 function isAuthApi() {
@@ -35,8 +35,8 @@ function isAuthApi() {
 
 function isNotAuth(){
     session_start();
-    if(isset($_SESSION['auth'])) {
-        header('Location: /auth/');
+    if(isset($_SESSION['user'])) { //si la sesion no viene vacia
+        header('Location: /menu');
     }
 }
 
